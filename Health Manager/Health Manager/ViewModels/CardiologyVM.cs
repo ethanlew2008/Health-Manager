@@ -27,14 +27,39 @@ namespace Health_Manager.ViewModels
 
         }
         private int days;
-       
+
+        public int Staff
+        {
+            get { return staff; }
+
+
+            set
+            {
+                if (staff != value)
+                {
+                    staff = value;
+                    OnPropertyChanged("Staff");
+                }
+            }
+
+        }
+        private int staff;
+
+        
+
         public CardiologyVM()
         {
             MessagingCenter.Subscribe<object, int>(this, "DaysVar", (sender, arg) =>
             {
                 Days = arg; //Receving Days value from MainBudgetVM
             });          
+            
         }
         
+        private void StaffClicked()
+        {
+
+        }
+
     }
 }

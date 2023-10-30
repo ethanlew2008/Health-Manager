@@ -2,12 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Health_Manager.Views.Cardiology"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{AppThemeBinding Light=White,Dark=Black}"
+            
+             NavigationPage.HasNavigationBar="False"  
+             BackgroundColor="{AppThemeBinding Light= White, Dark= Black}"
              >
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Days, StringFormat='Days: {0}'}" Padding="10,2" TextColor="{AppThemeBinding Light=Black,Dark=White}"/>
+
+            
+
+
+            <Grid Padding="0,50">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Staffing" FontSize="Large" VerticalOptions="Center" Padding="10,0" TextColor="{AppThemeBinding Light=Black,Dark=White}"/>
+                <Button x:Name="StaffButtonPlus" Text="+" TextColor="{AppThemeBinding Light=Black,Dark=White}" Grid.Column="1" Grid.Row="0" FontSize="Large" CornerRadius="40" WidthRequest="80" Scale="0.8" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="{AppThemeBinding Light=LightSlateGray, Dark=DarkSlateGray}"/>
+                <Button x:Name="StaffButtonMinus" Text="-" TextColor="{AppThemeBinding Light=Black,Dark=White}" Grid.Column="2" Grid.Row="0" FontSize="Large" CornerRadius="40" WidthRequest="80" Scale="0.8" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="{AppThemeBinding Light=IndianRed, Dark=DarkRed}" />
+            </Grid>
+            
+            
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

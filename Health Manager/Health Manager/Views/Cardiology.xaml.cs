@@ -20,6 +20,8 @@ namespace Health_Manager.Views
             if(App.Current.RequestedTheme == OSAppTheme.Dark) { BackgroundColor = Color.Black; } //Setting of Theme is here due to delay in Xaml
             else { BackgroundColor = Color.White; }
 
+           
+
         }
     }
 }

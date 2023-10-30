@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health_Manager.Views.MainBudget"
+             BackgroundColor="{AppThemeBinding Light= White, Dark= Black}"
+             NavigationPage.HasNavigationBar="False"
+             
+             >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="{Binding Days, StringFormat='Days: {0}'}" Padding="10,2" TextColor="{AppThemeBinding Light=Black,Dark=White}"/>
+            <Label Text="" FontSize="37" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Padding="10,50" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            
+
+
+            <Grid Padding="40,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Cardiology" TextColor="{AppThemeBinding Light=Black,Dark=White}" Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Light = LightSlateGray,Dark=DarkSlateGray}" Clicked="CardiologyClicked"/>
+
+            </Grid>
+            
+            
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

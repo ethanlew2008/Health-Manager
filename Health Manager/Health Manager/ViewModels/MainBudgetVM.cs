@@ -35,7 +35,7 @@ namespace Health_Manager.ViewModels
             }
 
         }
-        private int days = 365;
+        private int days = 366;
 
         public void YourMethod()
         {
@@ -48,13 +48,14 @@ namespace Health_Manager.ViewModels
             {
                 lock (lockObject)
                 {
-                    Thread.Sleep(5000); //Delay Between Days
+                     //Delay Between Days
                     Device.BeginInvokeOnMainThread(() =>
                     {
                         Days -= 1;
                         MessagingCenter.Send<object, int>(this, "DaysVar", Days); //Sharing Days Count with all pages
                         if (Days == 0) { Days = 365; } //Resetting if year has passed                              
-                    });                
+                    });
+                    Thread.Sleep(5000);
                 }                
             }
 

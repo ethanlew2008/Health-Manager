@@ -47,13 +47,13 @@ namespace Health_Manager.ViewModels
 
         
 
-        public CardiologyVM()
+        public CardiologyVM(int days)
         {
+            Days = days; 
             MessagingCenter.Subscribe<object, int>(this, "DaysVar", (sender, arg) =>
             {
                 Days = arg; //Receving Days value from MainBudgetVM
-            });          
-            
+            });                   
         }
         
         private void StaffClicked()
